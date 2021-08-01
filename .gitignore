@@ -6,3 +6,4 @@
 /AspNetCore.BookStore/.vs/AspNetCore.BookStore/v16
 /AspNetCore.BookStore/AspNetCore.BookStore/bin/Debug/netcoreapp3.1
 /AspNetCore.BookStore/AspNetCore.BookStore/obj
+/AspNetCore.BookStore/AspNetCore.BookStore/wwwroot/lib

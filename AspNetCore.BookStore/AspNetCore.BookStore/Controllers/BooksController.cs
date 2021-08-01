@@ -2,14 +2,13 @@
 
 namespace AspNetCore.BookStore.Controllers
 {
-    public class HomeController : Controller
+    public class BooksController : Controller
     {
-        public IActionResult index()
+        public IActionResult Index()
         {
             return View();
         }
-
-        public IActionResult AboutUs()
+        public IActionResult GetAllBooks()
         {
             return View();
         }
