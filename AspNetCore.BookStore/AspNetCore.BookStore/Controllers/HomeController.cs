@@ -4,7 +4,12 @@ namespace AspNetCore.BookStore.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult index()
+        public IActionResult Index()
+        {
+            return View();
+        }
+
+        public IActionResult ContactUs()
         {
             return View();
         }
