@@ -1,5 +1,8 @@
-﻿@using AspNetCore.BookStore.Models
-@model Book
+﻿@model Book
+
+@{ 
+    ViewData["Title"] = "Book Info - " + Model.Title;
+}
 
 <div class="container">
     <h3 class="display-4">Book Details</h3>
