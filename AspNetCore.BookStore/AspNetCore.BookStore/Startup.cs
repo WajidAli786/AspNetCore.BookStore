@@ -34,7 +34,11 @@ namespace AspNetCore.BookStore
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                //endpoints.MapDefaultControllerRoute();
+
+                endpoints.MapControllerRoute(
+                    name: "Default",
+                    pattern: "bookApp/{controller=Home}/{action=index}/{id?}");
             });
         }
     }
