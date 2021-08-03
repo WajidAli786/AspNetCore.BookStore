@@ -1,5 +1,7 @@
+using AspNetCore.BookStore.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
@@ -11,6 +13,7 @@ namespace AspNetCore.BookStore
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<BookStoreContext>(options =>options.UseSqlServer(connectionString: "Server=.\\SQLEXPRESS;Database=BookStore;Integrated Security=True;"));
             services.AddControllersWithViews();
 
 #if DEBUG
@@ -34,11 +37,7 @@ namespace AspNetCore.BookStore
 
             app.UseEndpoints(endpoints =>
             {
-                //endpoints.MapDefaultControllerRoute();
-
-                endpoints.MapControllerRoute(
-                    name: "Default",
-                    pattern: "bookApp/{controller=Home}/{action=index}/{id?}");
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }

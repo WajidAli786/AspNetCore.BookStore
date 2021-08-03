@@ -1,4 +1,5 @@
-﻿using AspNetCore.BookStore.Repository;
+﻿using AspNetCore.BookStore.Models;
+using AspNetCore.BookStore.Repository;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AspNetCore.BookStore.Controllers
@@ -26,6 +27,17 @@ namespace AspNetCore.BookStore.Controllers
         {
             var data = _bookRepository.GetBookById(bookId: id);
             return View(model: data);
+        }
+        
+        public IActionResult AddNewBook()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult AddNewBook(BookModel book)
+        {
+            return View();
         }
     }
 }

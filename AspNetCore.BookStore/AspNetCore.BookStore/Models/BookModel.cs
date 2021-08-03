@@ -1,6 +1,6 @@
 ﻿namespace AspNetCore.BookStore.Models
 {
-    public class Book
+    public class BookModel
     {
         public int Id { get; set; }
 
